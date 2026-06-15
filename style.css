@@ -3,12 +3,55 @@
 /* GLOBAL STYLES (MOBILE FIRST) */
 body {
     display: grid;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main main"
+    "footer footer";
     grid-template-columns: 1fr;
     background-color: tan;
 }
-nav ul{
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+nav ul {
     display: flex;
     justify-content: center;
     gap: 1rem;
     list-style: none;
+}
+.card-row{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.card {
+    flex: 1 1 100%;
+}
+@media screen and (min-width: 600px) {
+    .card{
+        flex: 1 1 calc(50% - 1rem);
+    }
+    body {
+        grid-template-columns: 1fr 1fr;
+        background-color: beige;
+    }
+}
+@media screen and (min-width: 800px) {
+    .card {
+        flex: 1 1 calc(33.33% - 1rem);
+    }
+    body {
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: lightyellow;
+    }
 }
