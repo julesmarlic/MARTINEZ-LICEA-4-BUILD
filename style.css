@@ -1,0 +1,14 @@
+/* CSS for Popular Berries */
+
+/* GLOBAL STYLES (MOBILE FIRST) */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: tan;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
